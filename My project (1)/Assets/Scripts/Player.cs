@@ -17,11 +17,12 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        bool Space = Input.GetKeyDown(KeyCode.Space);
+        if (Space)
         {
             Debug.Log("Space");
         }
-        if (Physics2D.Raycast(new Vector2(ReyPoint.position.x, ReyPoint.position.y), new Vector2(ReyPoint.position.x, ReyPoint.position.y - MaxRayDistance), MaxRayDistance, NoReycastMask) == true && Input.GetKeyDown(KeyCode.Space))
+        if (Physics2D.Raycast(new Vector2(ReyPoint.position.x, ReyPoint.position.y), new Vector2(ReyPoint.position.x, ReyPoint.position.y - MaxRayDistance), MaxRayDistance) == true && Space)
         {
             Jump = JumpForce;
             Debug.Log("I stay");
