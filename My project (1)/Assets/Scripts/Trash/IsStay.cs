@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class IsStay : MonoBehaviour
 {
-    public bool isStay = true;
-    private void OnTriggerStay(Collider other)
+    public bool Stay = true;
+    private void OnTriggerStay2D(Collider2D other) 
     {
+        //Debug.Log(other.gameObject.name);
         if (other.gameObject.CompareTag("Ground"))
         {
-            isStay = true;
+            Stay = true;
         }
         else
         {
-            isStay = false;
+            Stay = false;
         }
     }
    // private void OnTriggerExit(Collider other)
