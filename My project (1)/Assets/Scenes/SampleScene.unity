@@ -3009,6 +3009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4616d2253ee8d3743b69e6752c7fd2bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 1413358137}
   SlotsPanel: {fileID: 523374900}
   slots: []
 --- !u!1 &523374899
