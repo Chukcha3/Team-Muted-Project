@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e9967e92955be34db2360bf2c99b6d1, type: 3}
   m_Name: Wood
   m_EditorClassIdentifier: 
+  isCraftableItem: 0
+  ingredients: []
+  craftAmount: 0
   type: 0
   itemName: 
   itemDescription: 

@@ -7,7 +7,6 @@ public class ItemPickUper : MonoBehaviour
 {
     [SerializeField] Camera inventoryManagerOwner; // ќб'Їкт на €кому знаходитьс€ InventoryManager (камера)
     private InventoryManager inventoryManager;
-    private InventorySlot inventorySlot;
     private void Start()
     {
         inventoryManager = inventoryManagerOwner.GetComponent<InventoryManager>();
@@ -16,35 +15,39 @@ public class ItemPickUper : MonoBehaviour
     {
         if (collision.GetComponent<DropedItem>() != null)
         {
-            AddItem(collision.GetComponent<DropedItem>().itemInfo, collision.GetComponent<DropedItem>().itemInfo.amount, collision.GetComponent<DropedItem>().itemInfo.maxAmount);
+            AddItem(collision.GetComponent<DropedItem>().itemInfo);
             Destroy(collision.gameObject);
         }
     }
-    public void AddItem(ItemInfo item, int amount, int maxAmount)
+    public void AddItem(ItemInfo item)
     {
+        // якщо вже Ї цей айтем
         for (int i = 0; i < inventoryManager.slots.Count; i++)
         {
             if (inventoryManager.slots[i].GetComponent<InventorySlot>().item == item)
             {
-                if (inventoryManager.slots[i].itemAmount < maxAmount)
+                if (inventoryManager.slots[i].itemAmount < item.maxAmount)
                 {
-                    inventoryManager.slots[i].GetComponent<InventorySlot>().itemAmount += amount;
+                    inventoryManager.slots[i].GetComponent<InventorySlot>().itemAmount += item.amount;
                     inventoryManager.slots[i].itemAmountText.text = inventoryManager.slots[i].GetComponent<InventorySlot>().itemAmount.ToString();
                     return;
                 }
             }
         }
+        // якщо нема
         for (int i = 0; i < inventoryManager.slots.Count; i++)
         {
             if (inventoryManager.slots[i].GetComponent<InventorySlot>().isEmpty)
             {
                 inventoryManager.slots[i].item = item;
-                inventoryManager.slots[i].itemAmount = amount;
+                inventoryManager.slots[i].itemAmount = item.amount;
                 inventoryManager.slots[i].isEmpty = false;
                 inventoryManager.slots[i].SetIcon(item.icon);
-                inventoryManager.slots[i].itemAmountText.text = amount.ToString();
+                inventoryManager.slots[i].itemAmountText.text = item.amount.ToString();
                 return;
             }
         }
     }
+    
+    
 }

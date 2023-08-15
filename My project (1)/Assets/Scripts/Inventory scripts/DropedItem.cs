@@ -6,4 +6,5 @@ public class DropedItem : MonoBehaviour
 {
     public ItemInfo itemInfo;
 
+
 }
