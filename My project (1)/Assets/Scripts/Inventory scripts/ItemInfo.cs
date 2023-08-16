@@ -11,4 +11,5 @@ public class ItemInfo : ScriptableObject
     public int amount;
     public int maxAmount;
     public GameObject appropriateItem;
+    public Sprite icon;
 }

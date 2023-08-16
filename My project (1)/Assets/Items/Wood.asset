@@ -18,3 +18,4 @@ MonoBehaviour:
   amount: 3
   maxAmount: 9
   appropriateItem: {fileID: 2218048226611118485, guid: 6d75a4d2397cfb54f9cbaa38447df8aa, type: 3}
+  icon: {fileID: 7482667652216324306, guid: 9c56d280b9d508340863567e96a7b600, type: 3}

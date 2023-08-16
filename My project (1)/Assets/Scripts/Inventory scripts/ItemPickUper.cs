@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ItemPickUper : MonoBehaviour
@@ -28,6 +29,7 @@ public class ItemPickUper : MonoBehaviour
                 if (inventoryManager.slots[i].itemAmount < maxAmount)
                 {
                     inventoryManager.slots[i].GetComponent<InventorySlot>().itemAmount += amount;
+                    inventoryManager.slots[i].itemAmountText.text = inventoryManager.slots[i].GetComponent<InventorySlot>().itemAmount.ToString();
                     return;
                 }
             }
@@ -39,6 +41,8 @@ public class ItemPickUper : MonoBehaviour
                 inventoryManager.slots[i].item = item;
                 inventoryManager.slots[i].itemAmount = amount;
                 inventoryManager.slots[i].isEmpty = false;
+                inventoryManager.slots[i].SetIcon(item.icon);
+                inventoryManager.slots[i].itemAmountText.text = amount.ToString();
                 return;
             }
         }
