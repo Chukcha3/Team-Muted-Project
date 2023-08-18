@@ -11,33 +11,21 @@ public class CraftManager : MonoBehaviour
 
 
     [SerializeField] GameObject inventoryManagerOwner; // Об'єкт на якому знаходиться InventoryManager (камера)
-    [SerializeField] ItemInfo craftItem;
     private InventoryManager inventoryManager;
-    [SerializeField] ItemPickUper itemPickUper;
-    //private List<ItemInfo> invCopy = new List<ItemInfo>();
-    //private List<ItemInfo> usedItems = new List<ItemInfo>();
-    
+    [SerializeField] ItemPickUper itemPickUper;    
     void Start()
     {
         inventoryManager = inventoryManagerOwner.GetComponent<InventoryManager>();
-        //invCopy = inventoryManager.listOfItems;
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
 
-            if (isCanCraft(craftItem.ingredients))
-            {
-               Craft(craftItem.ingredients, craftItem);
-            }
-        }
     }
-    private void ingredientAmountPlus(RecipeIngredient invItem, int numb)
+    public void ingredientAmountPlus(RecipeIngredient invItem, int numb)
     {
         invItem.amount += numb;
     }
-    private bool isCanCraft( List<RecipeIngredient> recipe)
+    public bool isCanCraft(in List<RecipeIngredient> recipe)
     {
         List<RecipeIngredient> recipeCopy = new List<RecipeIngredient>(recipe.Count);
         recipe.ForEach((item) =>
@@ -132,4 +120,5 @@ public class CraftManager : MonoBehaviour
         }
         itemPickUper.AddItem(craftItem);
     }
+    
 }
