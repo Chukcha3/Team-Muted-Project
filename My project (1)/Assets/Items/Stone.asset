@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e9967e92955be34db2360bf2c99b6d1, type: 3}
   m_Name: Stone
   m_EditorClassIdentifier: 
+  isCraftableItem: 1
+  ingredients:
+  - {fileID: 11400000, guid: e8eca7f67aef1064e91a2ef218f3f037, type: 2}
+  craftAmount: 2
   type: 0
   itemName: Stone
   itemDescription: 
