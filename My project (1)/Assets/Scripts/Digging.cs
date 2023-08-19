@@ -5,7 +5,7 @@ using UnityEngine;
 public class Digging : MonoBehaviour
 {
     public Camera MyCamera;
-    [SerializeField] float Damage, penetration;
+    [SerializeField] float Damage, penetration, Range;
     void Start()
     { 
         //MyCamera = GetComponent<Camera>();
@@ -14,12 +14,13 @@ public class Digging : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && MyCamera)
-        {
+        {          
             Ray ray = MyCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
-            if (hit.collider)
+            float Lenght = (new Vector2(gameObject.transform.position.x, gameObject.transform.position.y) - hit.point).magnitude;
+            if (hit.collider && Lenght < Range)
             {
-                Debug.Log(hit.collider.name);
+                Debug.Log(Lenght);
                 if (hit.collider.GetComponent<TileStats>())
                 {
                     hit.collider.GetComponent<TileStats>().TakeDamage(Damage, penetration);
