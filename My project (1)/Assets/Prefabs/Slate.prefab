@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d52215a0551f7c4dbfbbf32d47e1bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Armor: 50000000
+  Armor: 5
   Health: 200
   MaxHealth: 200
   RegenerationTime: 0
