@@ -10,17 +10,14 @@ public class CraftManager : MonoBehaviour
 
 
 
-    [SerializeField] GameObject inventoryManagerOwner; // Об'єкт на якому знаходиться InventoryManager (камера)
+    [SerializeField] GameObject craftManagerOwner;
     private InventoryManager inventoryManager;
     [SerializeField] ItemPickUper itemPickUper;    
     void Start()
     {
-        inventoryManager = inventoryManagerOwner.GetComponent<InventoryManager>();
+        inventoryManager = craftManagerOwner.GetComponent<InventoryManager>();
     }
-    private void Update()
-    {
 
-    }
     public void ingredientAmountPlus(RecipeIngredient invItem, int numb)
     {
         invItem.amount += numb;

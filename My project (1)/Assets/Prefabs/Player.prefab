@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6884291542287973398}
   - component: {fileID: 6884291542287973393}
+  - component: {fileID: 3262924826482400052}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -129,6 +130,21 @@ MonoBehaviour:
   Speed: 40
   JumpForce: 200
   ReyPoint: {fileID: 6884291540835179503}
+--- !u!114 &3262924826482400052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884291542287973397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5113a9ac8011d83488179026d5440649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyCamera: {fileID: 0}
+  Damage: 0
+  penetration: 0
 --- !u!1 &6884291542745888754
 GameObject:
   m_ObjectHideFlags: 0
