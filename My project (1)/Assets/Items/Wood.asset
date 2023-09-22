@@ -16,8 +16,8 @@ MonoBehaviour:
   ingredients:
   - {fileID: 11400000, guid: 563798d1a8e69ff4c868fbbd7bac6a5e, type: 2}
   craftAmount: 2
-  type: 0
-  itemName: 
+  type: 3
+  itemName: Wood
   itemDescription: 
   amount: 3
   maxAmount: 9

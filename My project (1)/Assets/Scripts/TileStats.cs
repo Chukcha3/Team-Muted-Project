@@ -12,10 +12,6 @@ public class TileStats : MonoBehaviour
         
         MySpriteRenderer = GetComponent<SpriteRenderer>();
     }
-    void Update()
-    {
-        
-    }
     public void TakeDamage(float damage, float penetration)
     {
         if (Armor <= penetration)

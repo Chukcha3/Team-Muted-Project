@@ -12,10 +12,12 @@ public class CraftManager : MonoBehaviour
 
     [SerializeField] GameObject craftManagerOwner;
     private InventoryManager inventoryManager;
-    [SerializeField] ItemPickUper itemPickUper;    
+    [SerializeField] ItemPickUper itemPickUper;
+    [SerializeField] private GameObject trigger;
     void Start()
     {
         inventoryManager = craftManagerOwner.GetComponent<InventoryManager>();
+        itemPickUper = trigger.GetComponent<ItemPickUper>();
     }
 
     public void ingredientAmountPlus(RecipeIngredient invItem, int numb)

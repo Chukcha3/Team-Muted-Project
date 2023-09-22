@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2716715026071645498}
   - component: {fileID: 1904239212593769753}
   - component: {fileID: 3648396599981281459}
+  - component: {fileID: 3086483780618650887}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -29,14 +30,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4682846213030079093}
   m_Father: {fileID: 769502390687090973}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 30, y: 30}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1904239212593769753
 CanvasRenderer:
@@ -76,6 +78,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3086483780618650887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204081949072998796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b75be3bac36a94da8192738a26ee79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainParent: {fileID: 0}
+  image: {fileID: 3648396599981281459}
+  slotBeforeDragging: {fileID: 0}
 --- !u!1 &6475995535559943913
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +105,7 @@ GameObject:
   - component: {fileID: 5266552601686445525}
   - component: {fileID: 8265550429478117944}
   - component: {fileID: 4449481325311882019}
+  - component: {fileID: 1797174791}
   m_Layer: 5
   m_Name: slot
   m_TagString: Untagged
@@ -108,7 +126,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2716715026071645498}
-  - {fileID: 4682846213030079093}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -138,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
+  m_Color: {r: 0.9339623, g: 0.7286518, b: 0.5154415, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -167,11 +184,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da78a0f9b97eb8468890c9b5cd4068a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imeg: {fileID: 8265550429478117944}
   isEmpty: 1
   item: {fileID: 0}
   itemAmount: 0
   itemAmountText: {fileID: 0}
   icon: {fileID: 0}
+  selectedColor: {r: 0.9339623, g: 0.48620883, b: 0.383277, a: 1}
+  deselectedColor: {r: 0.9333334, g: 0.7294118, b: 0.5137255, a: 1}
+  isOnFastPanel: 0
+--- !u!114 &1797174791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6475995535559943913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 35, y: 35}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &6775010886643449853
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,13 +242,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6775010886643449853}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 769502390687090973}
-  m_RootOrder: 1
+  m_Father: {fileID: 2716715026071645498}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

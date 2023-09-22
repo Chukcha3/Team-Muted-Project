@@ -128,4 +128,4 @@ MonoBehaviour:
   Health: 50
   MaxHealth: 50
   RegenerationTime: 0
-  Drop: {fileID: 2218048226611118485, guid: 6d75a4d2397cfb54f9cbaa38447df8aa, type: 3}
+  Drop: {fileID: 2218048226611118485, guid: 720b7b1b68b03c1499e848b3ca0adaaf, type: 3}

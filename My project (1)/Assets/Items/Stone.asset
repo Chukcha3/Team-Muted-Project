@@ -16,10 +16,12 @@ MonoBehaviour:
   ingredients:
   - {fileID: 11400000, guid: e8eca7f67aef1064e91a2ef218f3f037, type: 2}
   craftAmount: 2
-  type: 0
+  type: 3
   itemName: Stone
   itemDescription: 
   amount: 1
   maxAmount: 3
   appropriateItem: {fileID: 2218048226611118485, guid: 720b7b1b68b03c1499e848b3ca0adaaf, type: 3}
   icon: {fileID: 7482667652216324306, guid: 051f86e59397b8d4d85c0a3588d18c95, type: 3}
+  tile: {fileID: 11400000, guid: ccb235fecf7c82a4e80c054717eaad6f, type: 2}
+  block: {fileID: 2218048226611118485, guid: 89e417645dd92b346afdeefcda420e1f, type: 3}
