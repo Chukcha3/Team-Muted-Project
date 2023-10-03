@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3150973637089801510}
   - component: {fileID: 2757194210207050668}
   m_Layer: 0
-  m_Name: Stone
+  m_Name: WoodBlock
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 9c56d280b9d508340863567e96a7b600, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Armor: 1
-  Health: 50
-  MaxHealth: 50
+  Health: 30
+  MaxHealth: 30
   RegenerationTime: 0
-  Drop: {fileID: 2218048226611118485, guid: 720b7b1b68b03c1499e848b3ca0adaaf, type: 3}
+  Drop: {fileID: 2218048226611118485, guid: 6d75a4d2397cfb54f9cbaa38447df8aa, type: 3}

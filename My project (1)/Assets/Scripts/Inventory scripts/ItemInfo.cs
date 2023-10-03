@@ -6,7 +6,6 @@ using UnityEditor.Tilemaps;
 public enum ItemType {Default, Food, Weapon, Block, Tool}
 public class ItemInfo : ScriptableObject
 {
-    
     public bool isCraftableItem;
     public List<RecipeIngredient> ingredients;
     public int craftAmount;

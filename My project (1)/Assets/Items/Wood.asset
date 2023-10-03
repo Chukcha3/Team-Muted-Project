@@ -19,7 +19,9 @@ MonoBehaviour:
   type: 3
   itemName: Wood
   itemDescription: 
-  amount: 3
-  maxAmount: 9
+  amount: 1
+  maxAmount: 64
   appropriateItem: {fileID: 2218048226611118485, guid: 6d75a4d2397cfb54f9cbaa38447df8aa, type: 3}
   icon: {fileID: 7482667652216324306, guid: 9c56d280b9d508340863567e96a7b600, type: 3}
+  tile: {fileID: 11400000, guid: fbe1dc4cd4127384ea2ab9ad1dfee452, type: 2}
+  block: {fileID: 2218048226611118485, guid: 7822da163352164419472caac3d636db, type: 3}

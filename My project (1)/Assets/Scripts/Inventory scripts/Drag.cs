@@ -12,8 +12,6 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     public InventorySlot slotBeforeDragging;
     public void OnBeginDrag (PointerEventData eventData)
     {
-        Debug.Log("efe");
-
         mainParent = transform.parent;
         slotBeforeDragging = transform.parent.GetComponent<InventorySlot>();
         transform.SetParent(transform.root);

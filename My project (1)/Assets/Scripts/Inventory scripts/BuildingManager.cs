@@ -14,6 +14,7 @@ public class BuildingManager : MonoBehaviour
     private InventoryManager inventoryManager;
     [SerializeField] private GameObject inventoryManagerOwner;
     [SerializeField] private GameObject fastPanel;
+    [SerializeField] GameObject blocksHolder;
     private void Start()
     {
         inventoryManager = inventoryManagerOwner.GetComponent<InventoryManager>();
@@ -25,8 +26,11 @@ public class BuildingManager : MonoBehaviour
         {
             if (GetCurrentSlot().item != null)
             {
-                
-                Build(GetCurrentSlot(), highlightedTilePos);
+                if (GetCurrentSlot().item.type == ItemType.Block)
+                {
+
+                    Build(GetCurrentSlot(), GetMousePosOnGrid());
+                }
             }
         }
     }
@@ -63,12 +67,20 @@ public class BuildingManager : MonoBehaviour
     }
     private void Build (InventorySlot currentSlot, Vector3Int position)
     {
-        currentSlot.item.tile.Paint(mainTilemap, currentSlot.item.block, position);
+        GameObject blockFarFarAway = Instantiate(currentSlot.item.block, new Vector3 (9999, 9999, 999), Quaternion.identity, blocksHolder.transform);
+        currentSlot.item.tile.Paint(mainTilemap, blockFarFarAway, position);
         currentSlot.DecreaseAmount(1);
     }
-    private InventorySlot GetCurrentSlot()
+    public InventorySlot GetCurrentSlot()
     {
-        return fastPanel.transform.GetChild(inventoryManager.selectedSlotInt).GetComponent<InventorySlot>();
+        if (inventoryManager.selectedSlotInt <= 1)
+        {
+            return fastPanel.transform.GetChild(inventoryManager.selectedSlotInt).GetComponent<InventorySlot>();
+        }
+        else
+        {
+            return fastPanel.transform.GetChild(inventoryManager.selectedSlotInt).GetComponent<InventorySlot>();
+        }
     }
     
 }

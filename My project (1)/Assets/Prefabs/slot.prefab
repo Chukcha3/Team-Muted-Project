@@ -193,6 +193,8 @@ MonoBehaviour:
   selectedColor: {r: 0.9339623, g: 0.48620883, b: 0.383277, a: 1}
   deselectedColor: {r: 0.9333334, g: 0.7294118, b: 0.5137255, a: 1}
   isOnFastPanel: 0
+  isCurrentISlot: 0
+  drillSlot: 0
 --- !u!114 &1797174791
 MonoBehaviour:
   m_ObjectHideFlags: 0

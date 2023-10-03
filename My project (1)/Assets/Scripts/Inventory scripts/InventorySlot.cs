@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class InventorySlot : MonoBehaviour, IDropHandler
-{ //-1
+{
     public Image imeg;
     public bool isEmpty = true;
     public ItemInfo item;
@@ -17,6 +17,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     [SerializeField] Color deselectedColor;
     public bool isOnFastPanel = false;
     public bool isCurrentISlot = false;
+    public bool drillSlot = false;
     public void SelectSlot()
     {
         imeg.color = selectedColor;
@@ -69,9 +70,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         else
         {
             RemoveItem();
-
         }
-
     }
     public void ExchangeSlots(ref InventorySlot slot)
     {
