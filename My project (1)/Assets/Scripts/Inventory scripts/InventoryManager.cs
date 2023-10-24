@@ -11,10 +11,10 @@ public class InventoryManager : MonoBehaviour
     public GameObject slotsPanel;
     public List<InventorySlot> slots = new List<InventorySlot>();
     private bool isOpen = false;
-    [SerializeField] ItemInfo drillItem;
     [SerializeField] Transform fastPanel;
     [SerializeField] GameObject craftPanel;
-    //[SerializeField] GameObject player;
+    [SerializeField] GameObject player;
+    [SerializeField] AttackScript attackScript;
     public void ChangeSelectedSlot(int newValue)
     {
         if (selectedSlotInt != newValue)
@@ -22,12 +22,34 @@ public class InventoryManager : MonoBehaviour
             fastPanel.GetChild(selectedSlotInt).GetComponent<InventorySlot>().DeselectSlot();
             fastPanel.GetChild(newValue).GetComponent<InventorySlot>().SelectSlot();
             selectedSlotInt = newValue;
+            if (player.transform.GetChild(3).childCount >= 1)
+            {
+                Destroy(player.transform.GetChild(3).GetChild(0).gameObject);
+            }
+            if (fastPanel.GetChild(newValue).GetComponent<InventorySlot>().item != null)
+            {
+                if (fastPanel.GetChild(newValue).GetComponent<InventorySlot>().item.type == ItemType.Weapon)
+                {
+                    if (fastPanel.GetChild(newValue).GetComponent<InventorySlot>().item is WeaponItem weaponItem)
+                    {
+
+
+                        //WeaponItem weaponItem = (WeaponItem)fastPanel.GetChild(newValue).GetComponent<InventorySlot>().item;
+                        attackScript.baseWeapon = weaponItem.weaponPrefab.GetComponent<BaseWeapon>();
+                        Instantiate(weaponItem.weaponPrefab, player.transform.GetChild(3).position, player.transform.GetChild(3).rotation, player.transform.GetChild(3));
+                    }
+                }
+                else
+                {
+                    attackScript.baseWeapon = null;
+                }
+            }
         }
     }
     private void Awake()
     {
+        attackScript = player.GetComponent<AttackScript>();
         fastPanel.transform.GetChild(0).GetComponent<InventorySlot>().SelectSlot();
-
     }
     private void Start()
     {

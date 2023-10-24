@@ -18,6 +18,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     public bool isOnFastPanel = false;
     public bool isCurrentISlot = false;
     public bool drillSlot = false;
+    public Transform player;
     public void SelectSlot()
     {
         imeg.color = selectedColor;

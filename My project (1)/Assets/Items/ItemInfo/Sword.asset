@@ -24,6 +24,8 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 6aa9fcd811c2d574691f994d258866bd, type: 3}
   tile: {fileID: 0}
   block: {fileID: 0}
+  weaponPrefab: {fileID: 9024186143361499516, guid: 19d8d9781393a814ea998c1b54801da6, type: 3}
   damage: 10
   attackSpeed: 0.2
   attackRange: 5
+  weaponPrefab: {fileID: 9024186143361499516, guid: 19d8d9781393a814ea998c1b54801da6, type: 3}

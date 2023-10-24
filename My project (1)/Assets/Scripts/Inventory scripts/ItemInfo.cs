@@ -18,4 +18,5 @@ public class ItemInfo : ScriptableObject
     public Sprite icon;
     public UnityEditor.Tilemaps.PrefabBrush tile;
     public GameObject block;
+    //public GameObject weaponPrefab;
 }

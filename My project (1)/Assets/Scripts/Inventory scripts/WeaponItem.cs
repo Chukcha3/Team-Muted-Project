@@ -8,4 +8,6 @@ public class WeaponItem : ItemInfo
     public float damage;
     public float attackSpeed;
     public float attackRange;
+    public GameObject weaponPrefab;
+    
 }
