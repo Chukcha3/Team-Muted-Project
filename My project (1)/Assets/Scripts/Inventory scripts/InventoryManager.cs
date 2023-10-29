@@ -25,6 +25,7 @@ public class InventoryManager : MonoBehaviour
             if (player.transform.GetChild(3).childCount >= 1)
             {
                 Destroy(player.transform.GetChild(3).GetChild(0).gameObject);
+                attackScript.baseWeapon = null;
             }
             if (fastPanel.GetChild(newValue).GetComponent<InventorySlot>().item != null)
             {

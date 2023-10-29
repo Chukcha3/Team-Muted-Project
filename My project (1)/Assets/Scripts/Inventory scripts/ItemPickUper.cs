@@ -7,8 +7,11 @@ public class ItemPickUper : MonoBehaviour
 {
     [SerializeField] Camera inventoryManagerOwner; // Об'єкт на якому знаходиться InventoryManager (камера)
     private InventoryManager inventoryManager;
+    private AttackScript attackScript;
+    [SerializeField] private GameObject player;
     private void Start()
     {
+        attackScript = player.GetComponent<AttackScript>();
         inventoryManager = inventoryManagerOwner.GetComponent<InventoryManager>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,6 +20,7 @@ public class ItemPickUper : MonoBehaviour
         {
             AddItem(collision.GetComponent<DropedItem>().itemInfo);
             Destroy(collision.gameObject);
+            
         }
     }
     public void AddItem(ItemInfo item)
@@ -44,6 +48,14 @@ public class ItemPickUper : MonoBehaviour
                 inventoryManager.slots[i].isEmpty = false;
                 inventoryManager.slots[i].SetIcon(item.icon);
                 inventoryManager.slots[i].itemAmountText.text = item.amount.ToString();
+                if (inventoryManager.slots[i].isCurrentISlot)
+                {
+                    if (inventoryManager.slots[i].item is WeaponItem weaponItem)
+                    {
+                        attackScript.baseWeapon = weaponItem.weaponPrefab.GetComponent<BaseWeapon>();
+                        Instantiate(weaponItem.weaponPrefab, player.transform.GetChild(3).position, player.transform.GetChild(3).rotation, player.transform.GetChild(3));
+                    }
+                }
                 return;
             }
         }

@@ -93,6 +93,7 @@ MonoBehaviour:
   mainParent: {fileID: 0}
   image: {fileID: 3648396599981281459}
   slotBeforeDragging: {fileID: 0}
+  player: {fileID: 5434006566850350570, guid: 5cd678f8ffa09df46841567a9f0b656a, type: 3}
 --- !u!1 &6475995535559943913
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,6 +196,7 @@ MonoBehaviour:
   isOnFastPanel: 0
   isCurrentISlot: 0
   drillSlot: 0
+  player: {fileID: 0}
 --- !u!114 &1797174791
 MonoBehaviour:
   m_ObjectHideFlags: 0
