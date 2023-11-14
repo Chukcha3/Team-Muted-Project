@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BaseWeapon : MonoBehaviour
 {
+    enum damageType {defaultDamage, fireGamage, waterDamage, plantDamage }
     public float damage;
     virtual public void Attack()
     {

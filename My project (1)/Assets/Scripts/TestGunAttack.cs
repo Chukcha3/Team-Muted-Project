@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TestGunAttack : BaseWeapon
+{
+    public GameObject bullet;
+    [SerializeField] public float bulletSpeed;
+    public override void Attack()
+    {
+        GameObject thisWeapon = GameObject.FindGameObjectWithTag("weapon");
+        Vector2 diraction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - thisWeapon.transform.GetChild(0).position).normalized;
+        //thisWeapon.transform.rotation = ;
+        GameObject newBullet = Instantiate(bullet, thisWeapon.transform.GetChild(0).position, thisWeapon.transform.rotation);
+        newBullet.GetComponent<Rigidbody2D>().AddForce(diraction * bulletSpeed, ForceMode2D.Impulse);
+        Destroy(newBullet, 4);
+    }
+}
