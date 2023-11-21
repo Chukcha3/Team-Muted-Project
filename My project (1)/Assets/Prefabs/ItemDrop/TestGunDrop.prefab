@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3150973637089801510}
   - component: {fileID: -4726899645046135143}
   - component: {fileID: 7960789543992905170}
-  - component: {fileID: 5316987730568496245}
   m_Layer: 0
   m_Name: TestGunDrop
   m_TagString: Untagged
@@ -148,18 +147,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemInfo: {fileID: 11400000, guid: a323adab8bc62ef43b816097949c5bab, type: 2}
---- !u!114 &5316987730568496245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2218048226611118485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 245a798e8ad1d2542988c8dff70eef72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  bullet: {fileID: 0}
-  bulletSpeed: 0

@@ -13,12 +13,13 @@ public class MeleeWeapon : BaseWeapon
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(player.transform.GetChild(3).position, attackRange, enemyLayer);
         foreach (Collider2D enemy in hitEnemies)
         {
-            
-            // enemy.GetComponent<HP>().TakeDamage(damage);
+            enemy.gameObject.GetComponent<HealthPoints>().TakeDamage(damage);
         }
     }
     private void OnDrawGizmosSelected()
     {
-        
+        if (player.transform.GetChild(3) == null)
+            return;
+        Gizmos.DrawWireSphere(player.transform.GetChild(3).position, attackRange);
     }
 }

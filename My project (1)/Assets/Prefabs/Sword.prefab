@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   player: {fileID: 5434006566850350570, guid: 5cd678f8ffa09df46841567a9f0b656a, type: 3}
-  attackRange: 3
+  attackRange: 1
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512

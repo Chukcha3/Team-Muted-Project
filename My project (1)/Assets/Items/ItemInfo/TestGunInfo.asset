@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCraftableItem: 0
   ingredients: []
-  craftAmount: 0
-  type: 0
+  craftAmount: 1
+  type: 2
   itemName: 
   itemDescription: 
-  amount: 0
-  maxAmount: 0
+  amount: 1
+  maxAmount: 1
   appropriateItem: {fileID: 0}
   icon: {fileID: 0}
   tile: {fileID: 0}
@@ -27,4 +27,4 @@ MonoBehaviour:
   damage: 0
   attackSpeed: 0
   attackRange: 0
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 9024186143361499516, guid: 3fa46c24658682340b48eb51a9e2c42f, type: 3}
