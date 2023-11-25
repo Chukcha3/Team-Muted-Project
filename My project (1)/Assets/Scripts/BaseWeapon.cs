@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BaseWeapon : MonoBehaviour
 {
-    enum damageType {defaultDamage, fireGamage, waterDamage, plantDamage }
+    public enum damageType {defaultDamage, fireGamage, waterDamage, plantDamage }
     public float damage;
+    public float attackSpeed;
+    public bool canAttack;
     virtual public void Attack()
     {
         Debug.Log("base weapon attack");

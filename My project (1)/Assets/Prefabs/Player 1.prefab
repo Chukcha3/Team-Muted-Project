@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryManagerOwner: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &5434006566771983885
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b15d11075eae8742877d30260fed144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  muzzlePoint: {fileID: 501656192248523452}
   Speed: 8
   JumpForce: 400
   MaxJumpsCount: 1

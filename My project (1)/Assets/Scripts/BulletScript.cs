@@ -6,13 +6,14 @@ public class BulletScript : MonoBehaviour
 {
     public bool isBulletEnemy;
     public GameObject weaponThatShotMe;
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!isBulletEnemy)
         {
             if (collision.gameObject.tag == "Enemy")
             {
                 collision.gameObject.GetComponent<HealthPoints>().TakeDamage(weaponThatShotMe.GetComponent<BaseWeapon>().damage);
+                Destroy(gameObject);
             }
         }
         else
@@ -21,6 +22,7 @@ public class BulletScript : MonoBehaviour
             {
                 collision.gameObject.GetComponent<HealthPoints>().TakeDamage(weaponThatShotMe.GetComponent<BaseWeapon>().damage);
             }
+            Destroy(gameObject);
         }
     }
 }

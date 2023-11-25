@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -6337548611090911233}
   - component: {fileID: -6673310249628724693}
   - component: {fileID: 5343141090041481645}
+  - component: {fileID: -8804939944969410297}
   m_Layer: 0
   m_Name: testBullet
   m_TagString: Untagged
@@ -121,3 +122,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBulletEnemy: 0
   weaponThatShotMe: {fileID: 9024186143361499516, guid: 3fa46c24658682340b48eb51a9e2c42f, type: 3}
+--- !u!61 &-8804939944969410297
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4213766115797407123}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

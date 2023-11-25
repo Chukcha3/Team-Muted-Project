@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMove3 : MonoBehaviour
 {
+    [SerializeField] public GameObject muzzlePoint;
     [SerializeField] float Speed = 1f, JumpForce = 5f;
     [SerializeField] int MaxJumpsCount = 1;
     public int Jump = 0;
