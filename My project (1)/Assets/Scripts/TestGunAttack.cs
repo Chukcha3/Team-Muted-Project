@@ -9,7 +9,7 @@ public class TestGunAttack : BaseWeapon
     [SerializeField] public float bulletSpeed;
     public override void Attack()
     {
-        if (Time.time >= nextShotTime)
+        //if (Time.time >= nextShotTime)
         {
             GameObject thisWeapon = GameObject.FindGameObjectWithTag("weapon");
             Vector2 diraction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - thisWeapon.transform.GetChild(0).position).normalized;
