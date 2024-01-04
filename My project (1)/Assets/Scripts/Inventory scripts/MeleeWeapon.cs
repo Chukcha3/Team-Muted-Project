@@ -23,7 +23,7 @@ public class MeleeWeapon : BaseWeapon
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint, attackRange, LayerMask.GetMask("Enemies"));
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.gameObject.GetComponent<HealthPoints>().TakeDamage(damage);
+            enemy.gameObject.GetComponent<HealthPoints>().TakeDamage(damage,HealthPoints.healthType.Default);
         }
     }
     private void OnDrawGizmosSelected()

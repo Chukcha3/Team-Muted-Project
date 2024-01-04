@@ -12,7 +12,7 @@ public class BulletScript : MonoBehaviour
         {
             if (collision.gameObject.tag == "Enemy")
             {
-                collision.gameObject.GetComponent<HealthPoints>().TakeDamage(weaponThatShotMe.GetComponent<BaseWeapon>().damage);
+                collision.gameObject.GetComponent<HealthPoints>().TakeDamage(weaponThatShotMe.GetComponent<BaseWeapon>().damage, HealthPoints.healthType.Default);
                 Destroy(gameObject);
             }
         }
@@ -20,7 +20,7 @@ public class BulletScript : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
-                collision.gameObject.GetComponent<HealthPoints>().TakeDamage(weaponThatShotMe.GetComponent<BaseWeapon>().damage);
+                collision.gameObject.GetComponent<HealthPoints>().TakeDamage(weaponThatShotMe.GetComponent<BaseWeapon>().damage, HealthPoints.healthType.Default);
             }
             Destroy(gameObject);
         }
