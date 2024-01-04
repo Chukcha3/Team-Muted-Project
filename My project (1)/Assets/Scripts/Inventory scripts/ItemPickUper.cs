@@ -55,6 +55,10 @@ public class ItemPickUper : MonoBehaviour
                         attackScript.baseWeapon = weaponItem.weaponPrefab.GetComponent<BaseWeapon>();
                         Instantiate(weaponItem.weaponPrefab, player.transform.GetChild(3).position, player.transform.GetChild(3).rotation, player.transform.GetChild(3));
                     }
+                    else if (inventoryManager.slots[i].item is ToolItem ToolItem)
+                    {
+                        Instantiate(ToolItem.toolPrefab, player.transform.GetChild(3).position, player.transform.GetChild(3).rotation, player.transform.GetChild(3));
+                    }
                 }
                 return;
             }

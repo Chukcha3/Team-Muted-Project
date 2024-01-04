@@ -6,6 +6,7 @@ public class AttackScript : MonoBehaviour
 {
     public BaseWeapon baseWeapon;
     private BuildingManager buildingManager;
+    [SerializeField] Transform attackPoint;
     private void Start()
     {
         buildingManager = GetComponent<BuildingManager>();
@@ -22,10 +23,9 @@ public class AttackScript : MonoBehaviour
             {
                 if (buildingManager.GetCurrentSlot().item.type == ItemType.Weapon)
                 {
-                    if (Input.GetKeyDown(KeyCode.Mouse0))
+                    if (baseWeapon != null)
                     {
-                        if (baseWeapon != null)
-                        baseWeapon.Attack();
+                        baseWeapon.Attack(transform.position);
                     }
                 }
             }

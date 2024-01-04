@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9967e92955be34db2360bf2c99b6d1, type: 3}
+  m_Name: Moss
+  m_EditorClassIdentifier: 
+  isCraftableItem: 0
+  ingredients: []
+  craftAmount: 0
+  type: 3
+  itemName: Moss
+  itemDescription: Just a block of moss
+  amount: 1
+  maxAmount: 64
+  appropriateItem: {fileID: 2218048226611118485, guid: 6fd0698fbb562e647aef5309be49a1f7, type: 3}
+  icon: {fileID: 21300000, guid: 935f865f8f8cce2498af7847afb87027, type: 3}
+  tile: {fileID: 0}
+  tile2: {fileID: 0}
+  block: {fileID: 2218048226611118485, guid: 7679844727950bd4189de0ff0eeb98ae, type: 3}

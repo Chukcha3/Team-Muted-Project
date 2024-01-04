@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9967e92955be34db2360bf2c99b6d1, type: 3}
+  m_Name: EmeraldMarshmallow
+  m_EditorClassIdentifier: 
+  isCraftableItem: 0
+  ingredients: []
+  craftAmount: 0
+  type: 0
+  itemName: Emerald Marshmallow
+  itemDescription: Looks tasty, but its not
+  amount: 1
+  maxAmount: 64
+  appropriateItem: {fileID: 2218048226611118485, guid: 916f285385f527d4a8566c3c8ba70785, type: 3}
+  icon: {fileID: 21300000, guid: 42200724f3232744e9218e18aa394ae0, type: 3}
+  tile: {fileID: 0}
+  tile2: {fileID: 0}
+  block: {fileID: 0}

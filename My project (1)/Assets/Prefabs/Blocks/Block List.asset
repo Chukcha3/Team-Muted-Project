@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0dfbbb0d0715354b8c51cea2f58762b, type: 3}
+  m_Name: Block List
+  m_EditorClassIdentifier: 
+  blockList:
+  - {fileID: 2218048226611118485, guid: 0093fe829dd9da0439a8e02a4cf8b2cf, type: 3}
+  - {fileID: 2218048226611118485, guid: 88d3036eb3267c648893fb279d57dc17, type: 3}
+  - {fileID: 2218048226611118485, guid: 89e417645dd92b346afdeefcda420e1f, type: 3}
+  - {fileID: 2218048226611118485, guid: 7a3279e89b908ee4cb4d347e36e4a5be, type: 3}
+  - {fileID: 2218048226611118485, guid: 3b1f989cfa7e4ca46a9351c27df6bd7c, type: 3}
+  - {fileID: 2218048226611118485, guid: 7679844727950bd4189de0ff0eeb98ae, type: 3}
+  - {fileID: 2218048226611118485, guid: 50c3be7784ee599408918e185194c7eb, type: 3}
+  - {fileID: 2218048226611118485, guid: 2cefa4eafb964a3498cc6e805b906639, type: 3}
+  - {fileID: 2218048226611118485, guid: 9bd6d86e5de749740a25416efa7f74ee, type: 3}
+  - {fileID: 2218048226611118485, guid: 9f21cc7cfb82df64a91eec3110125a63, type: 3}
+  - {fileID: 2218048226611118485, guid: 3552d899f1ec10c49a3d81a6dd9b381b, type: 3}
+  - {fileID: 2218048226611118485, guid: 564e25d528d141f40b05d1bdaba7d04b, type: 3}
+  Dirt: {fileID: 2218048226611118485, guid: 0093fe829dd9da0439a8e02a4cf8b2cf, type: 3}
+  Grass: {fileID: 2218048226611118485, guid: 88d3036eb3267c648893fb279d57dc17, type: 3}
+  Stone: {fileID: 2218048226611118485, guid: 89e417645dd92b346afdeefcda420e1f, type: 3}
+  Iron: {fileID: 2218048226611118485, guid: 7a3279e89b908ee4cb4d347e36e4a5be, type: 3}
+  Gold: {fileID: 2218048226611118485, guid: 3b1f989cfa7e4ca46a9351c27df6bd7c, type: 3}
+  Moss: {fileID: 2218048226611118485, guid: 7679844727950bd4189de0ff0eeb98ae, type: 3}
+  EmeraldMarshmallow: {fileID: 2218048226611118485, guid: 50c3be7784ee599408918e185194c7eb, type: 3}
+  BlackSoil: {fileID: 2218048226611118485, guid: 2cefa4eafb964a3498cc6e805b906639, type: 3}
+  Morion: {fileID: 2218048226611118485, guid: 9bd6d86e5de749740a25416efa7f74ee, type: 3}
+  Sand: {fileID: 2218048226611118485, guid: 9f21cc7cfb82df64a91eec3110125a63, type: 3}
+  SandStone: {fileID: 2218048226611118485, guid: 3552d899f1ec10c49a3d81a6dd9b381b, type: 3}
+  Zircon: {fileID: 2218048226611118485, guid: 564e25d528d141f40b05d1bdaba7d04b, type: 3}
+  Ice: {fileID: 2218048226611118485, guid: cee473f2ddc714c4b9750cc35c790e80, type: 3}

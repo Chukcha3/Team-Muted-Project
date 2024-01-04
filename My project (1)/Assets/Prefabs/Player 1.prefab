@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryManagerOwner: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 5434006566850350570}
 --- !u!1 &5434006566771983885
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +207,6 @@ GameObject:
   - component: {fileID: 5434006567096360134}
   - component: {fileID: 5434006567096360133}
   - component: {fileID: 5434006567096360155}
-  - component: {fileID: 3427377656683779598}
   m_Layer: 7
   m_Name: Player 1
   m_TagString: Untagged
@@ -288,19 +287,6 @@ MonoBehaviour:
   Damage: 10
   penetration: 2
   Range: 10
---- !u!114 &3427377656683779598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5434006566850350570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92bb2f3dddce2204e8ddc4ef5b3689fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseWeapon: {fileID: 0}
 --- !u!1 &5434006568619780625
 GameObject:
   m_ObjectHideFlags: 0

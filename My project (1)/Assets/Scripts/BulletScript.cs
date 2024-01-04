@@ -8,7 +8,7 @@ public class BulletScript : MonoBehaviour
     public GameObject weaponThatShotMe;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!isBulletEnemy)
+        if (isBulletEnemy == false)
         {
             if (collision.gameObject.tag == "Enemy")
             {

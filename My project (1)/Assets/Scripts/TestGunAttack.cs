@@ -7,7 +7,7 @@ public class TestGunAttack : BaseWeapon
     public GameObject bullet;
     public float nextShotTime = 0;
     [SerializeField] public float bulletSpeed;
-    public override void Attack()
+    public override void Attack(Vector2 attackPoint)
     {
         if (Time.time >= nextShotTime)
         {
@@ -19,4 +19,9 @@ public class TestGunAttack : BaseWeapon
             nextShotTime = Time.time + attackSpeed;
         }
     }
+    private void Start()
+    {
+        nextShotTime = 0;
+    }
+
 }
