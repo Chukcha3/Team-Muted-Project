@@ -17,10 +17,10 @@ public class MeleeWeapon : BaseWeapon
             Debug.Log("error");
         }
     }
-    override public void Attack()
+    override public void Attack(Vector2 attackPoint)
     {
         Debug.Log("melee weapon attack");
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(playerScript.muzzlePoint.transform.position, attackRange);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint, attackRange, LayerMask.GetMask("Enemies"));
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.gameObject.GetComponent<HealthPoints>().TakeDamage(damage,HealthPoints.healthType.Default);

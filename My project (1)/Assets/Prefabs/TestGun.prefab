@@ -102,8 +102,8 @@ MonoBehaviour:
   attackSpeed: 0.3
   canAttack: 0
   bullet: {fileID: 4213766115797407123, guid: 3b091a86582032e489cf03807a64fdbb, type: 3}
-  nextShotTime: 26.252125
-  bulletSpeed: 10
+  nextShotTime: 21.627672
+  bulletSpeed: 15
 --- !u!1 &9173023839952080107
 GameObject:
   m_ObjectHideFlags: 0

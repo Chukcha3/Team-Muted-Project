@@ -8,7 +8,7 @@ public class BaseWeapon : MonoBehaviour
     public float damage;
     public float attackSpeed;
     public bool canAttack;
-    virtual public void Attack()
+    virtual public void Attack(Vector2 attackPoint)
     {
         Debug.Log("base weapon attack");
     }

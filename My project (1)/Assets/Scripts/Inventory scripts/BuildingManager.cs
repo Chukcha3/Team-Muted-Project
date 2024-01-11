@@ -21,7 +21,12 @@ public class BuildingManager : MonoBehaviour
     }
     private void Update()
     {
-        HighlightTile();
+        if (GetCurrentSlot().item != null)
+        {
+            
+                HighlightTile();
+            
+        }
         if (Input.GetMouseButtonDown(0))
         {
             if (GetCurrentSlot().item != null)
@@ -51,7 +56,7 @@ public class BuildingManager : MonoBehaviour
 
             TileBase tile = mainTilemap.GetTile(mouseGridPos);
 
-            if (true)//************
+            if (tile)//************
             {
                 tempTilemap.SetTile(mouseGridPos, highlightedTile);
 

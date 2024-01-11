@@ -1,0 +1,30 @@
+{
+  "oreList": [
+    {
+      "myType": 0,
+      "amont": 200,
+      "stackAmount": 5,
+      "replacedBlock": 2
+    },
+
+    {
+      "myType": 1,
+      "amont": 300,
+      "stackAmount": 50,
+      "replacedBlock": 2
+    },
+
+    {
+      "myType": 2,
+      "amont": 300,
+      "stackAmount": 50,
+      "replacedBlock": 5
+    },
+    {
+      "myType": 3,
+      "amont": 300,
+      "stackAmount": 50,
+      "replacedBlock": 5
+    }
+  ]
+}

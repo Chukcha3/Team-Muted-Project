@@ -11,6 +11,8 @@ public class InventoryManager : MonoBehaviour
     public GameObject slotsPanel;
     public List<InventorySlot> slots = new List<InventorySlot>();
     private bool isOpen = false;
+    private BuildingManager buildingManager;
+    private CameraScript cameraScript;
     [SerializeField] Transform fastPanel;
     [SerializeField] GameObject craftPanel;
     [SerializeField] GameObject player;
@@ -29,21 +31,18 @@ public class InventoryManager : MonoBehaviour
             }
             if (fastPanel.GetChild(newValue).GetComponent<InventorySlot>().item != null)
             {
-                if (fastPanel.GetChild(newValue).GetComponent<InventorySlot>().item.type == ItemType.Weapon)
-                {
-                    if (fastPanel.GetChild(newValue).GetComponent<InventorySlot>().item is WeaponItem weaponItem)
-                    {
 
-
-                        //WeaponItem weaponItem = (WeaponItem)fastPanel.GetChild(newValue).GetComponent<InventorySlot>().item;
-                        attackScript.baseWeapon = weaponItem.weaponPrefab.GetComponent<BaseWeapon>();
-                        Instantiate(weaponItem.weaponPrefab, player.transform.GetChild(3).position, player.transform.GetChild(3).rotation, player.transform.GetChild(3));
-                    }
-                }
-                else
+                if (fastPanel.GetChild(newValue).GetComponent<InventorySlot>().item is WeaponItem weaponItem)
                 {
-                    attackScript.baseWeapon = null;
+                    //WeaponItem weaponItem = (WeaponItem)fastPanel.GetChild(newValue).GetComponent<InventorySlot>().item;
+                    attackScript.baseWeapon = weaponItem.weaponPrefab.GetComponent<BaseWeapon>();
+                    Instantiate(weaponItem.weaponPrefab, player.transform.GetChild(3).position, player.transform.GetChild(3).rotation, player.transform.GetChild(3));
                 }
+                else if (fastPanel.GetChild(newValue).GetComponent<InventorySlot>().item is ToolItem ToolItem)
+                {
+                    Instantiate(ToolItem.toolPrefab, player.transform.GetChild(3).position, player.transform.GetChild(3).rotation, player.transform.GetChild(3));
+                }
+
             }
         }
     }
@@ -51,6 +50,8 @@ public class InventoryManager : MonoBehaviour
     {
         attackScript = player.GetComponent<AttackScript>();
         fastPanel.transform.GetChild(0).GetComponent<InventorySlot>().SelectSlot();
+        buildingManager = player.GetComponent<BuildingManager>();
+        cameraScript = Camera.main.GetComponent<CameraScript>();
     }
     private void Start()
     {
@@ -103,5 +104,21 @@ public class InventoryManager : MonoBehaviour
                 craftPanel.SetActive(false);    
             }
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (buildingManager.GetCurrentSlot().item != null)
+            {
+                if (buildingManager.GetCurrentSlot().item.type == ItemType.Food)
+                {
+                    BuildRocket(buildingManager.GetCurrentSlot());
+                }
+            }
+        }
+    }
+    private void BuildRocket(InventorySlot slot)
+    {
+        GameObject rocket = Instantiate(slot.item.rocket, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
+        slot.DecreaseAmount(1);
+        cameraScript.target = rocket;
     }
 }

@@ -17,6 +17,7 @@ public class ItemInfo : ScriptableObject
     public GameObject appropriateItem;
     public Sprite icon;
     public UnityEditor.Tilemaps.PrefabBrush tile;
+    public UnityEditor.Tilemaps.PrefabBrush tile2;
     public GameObject block;
-    //public GameObject weaponPrefab;
+    public GameObject rocket;
 }
