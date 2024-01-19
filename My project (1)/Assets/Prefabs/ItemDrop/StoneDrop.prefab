@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3150973637089801510}
   - component: {fileID: -4726899645046135143}
   - component: {fileID: 7960789543992905170}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StoneDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+  m_Sprite: {fileID: 21300000, guid: badcb26103272e44e85910e8c58a410a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

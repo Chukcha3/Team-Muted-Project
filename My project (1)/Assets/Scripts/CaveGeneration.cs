@@ -40,6 +40,7 @@ public class CaveGeneration : MonoBehaviour
     [SerializeField] int desertBound1, desertBound2;
     [SerializeField] int mountainBound1, mountainBound2;
     [SerializeField] int iceBound1, iceBound2;
+    [SerializeField] int defaultBuond1, defaultBound2;
 
     [SerializeField] Transform world;
     GameObject[,] caveBlocks;
@@ -69,6 +70,7 @@ public class CaveGeneration : MonoBehaviour
         OrePlacement(loadedOreList);
         SurfaceGeneration();
         GrassPlanting();
+        SetWorldBoard();
     }
     private void Update()
     {
@@ -80,15 +82,24 @@ public class CaveGeneration : MonoBehaviour
 
         }*/
     }
-    private int GetIntFromBlock(GameObject block)
+
+    private void SetWorldBoard()
     {
-        if (block == blockList.blockList[2])
+        for (int i = 0; i < caveWeidth; i++)
         {
-            return 1;
-        }
-        else
-        {
-            return 0;
+            for (int j = 0; j < caveHeight; j++)
+            {
+                if (i == 0 || i == caveWeidth - 1 || j == 0)
+                {
+                    if (caveMap[i, j] == 0)
+                    {
+
+                        caveMap[i, j] = 1;
+                        GameObject block = GetCaveDefaultBlock(i);
+                        caveBlocks[i, j] = Instantiate(block, new Vector3(i, j, 0), Quaternion.identity.normalized.normalized, world);
+                    }
+                }
+            }
         }
     }
     private void Generate()
@@ -156,14 +167,21 @@ public class CaveGeneration : MonoBehaviour
                             break;
                         case OreType.Zircon:
                             oreBlock = blockList.Zircon;
-                            x = Random.Range(desertBound1, desertBound2 + 1);
+                            x = Random.Range(desertBound1, desertBound2);
                             break;
+                        case OreType.Morion:
+                            oreBlock = blockList.Morion;
+                            x = Random.Range(defaultBuond1, defaultBound2 + 1);
+                            break;
+                        case OreType.Cabyg:
+                            oreBlock = blockList.Cabyg;
+                            x = Random.Range(iceBound1, iceBound2 + 1);
+                                break;
                     }
                     if (caveMap[x, y] == 1)
                     {
                         //if (caveBlocks[x, y] == blockList.blockList[oreList.oreList[i].replacedBlock])
                         //{
-                        Debug.Log(GetIntFromBlock(caveBlocks[x, y]));
                         caveMap[x, y] = 2;
                         Destroy(caveBlocks[x, y]);
                         caveBlocks[x, y] = Instantiate(oreBlock, new Vector3(x, y, 0), Quaternion.identity.normalized.normalized, world);
@@ -274,7 +292,7 @@ public class CaveGeneration : MonoBehaviour
     }
     private void DirtFiller(int x, int y)
     {
-        for (int i = y; i > 0; i--)
+        for (int i = y; i >= 0; i--)
         {
             surfaceMap[x, y] = 1;
             if (surfaceBlocks[x, i] != null)
@@ -282,7 +300,7 @@ public class CaveGeneration : MonoBehaviour
                 Destroy(surfaceBlocks[x, y]);
             }
             GameObject block = GetSurfaceBlock(x); 
-            surfaceBlocks[x, y] = Instantiate(block, new Vector3(x, i + caveHeight, 0.0f), Quaternion.identity, world);
+            surfaceBlocks[x, y] = Instantiate(block, new Vector3(x, i + caveHeight - 1, 0.0f), Quaternion.identity, world);
         }
     }
     private void GrassPlanting()
@@ -412,7 +430,9 @@ public enum OreType
     Gold = 0, 
     Iron,
     Emerald, 
-    Zircon
+    Zircon,
+    Morion, 
+    Cabyg
 };
 
 [System.Serializable]

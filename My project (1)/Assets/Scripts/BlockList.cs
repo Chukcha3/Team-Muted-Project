@@ -18,4 +18,5 @@ public class BlockList : ScriptableObject
     public GameObject SandStone;
     public GameObject Zircon;
     public GameObject Ice;
+    public GameObject Cabyg;
 }

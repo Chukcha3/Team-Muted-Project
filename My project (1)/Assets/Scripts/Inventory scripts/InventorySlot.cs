@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class InventorySlot : MonoBehaviour, IDropHandler
+public class InventorySlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Image imeg;
     public bool isEmpty = true;
@@ -19,6 +19,8 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     public bool isCurrentISlot = false;
     public bool drillSlot = false;
     public Transform player;
+    [SerializeField] private GameObject descriptionObject;
+    private ItemDescription description;
     public void SelectSlot()
     {
         imeg.color = selectedColor;
@@ -29,7 +31,6 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         imeg.color = deselectedColor;
         isCurrentISlot = false;
     }
-
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
@@ -41,11 +42,12 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         }
         drag.mainParent = transform;
     }
-
+    
     private void Start()
     {
         icon = transform.GetChild(0).gameObject.GetComponent<Image>();
         itemAmountText = transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
+        description = descriptionObject.GetComponent<ItemDescription>();
     }
     public void SetIcon(Sprite icon)
     {
@@ -89,4 +91,18 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         this.itemAmountText = slot1.itemAmountText;
     }
 
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (item != null)
+        {
+            description.isMouseOnSlot = true;
+            description.name.text = item.name;
+            description.description.text = item.itemDescription;
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        description.isMouseOnSlot = false;
+    }
 }
