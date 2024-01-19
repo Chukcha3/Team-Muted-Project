@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - weapon
   - Enemy
+  - Slot
   layers:
   - Default
   - TransparentFX

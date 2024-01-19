@@ -25,6 +25,18 @@
       "amont": 300,
       "stackAmount": 50,
       "replacedBlock": 5
+    },
+    {
+      "myType": 4,
+      "amont": 400,
+      "stackAmount": 3,
+      "replacedBlock": 7
+    },
+    {
+      "myType": 5,
+      "amont": 300,
+      "stackAmount": 3,
+      "replacedBlock": 12
     }
   ]
 }

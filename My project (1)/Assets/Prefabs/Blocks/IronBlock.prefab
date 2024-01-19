@@ -129,3 +129,6 @@ MonoBehaviour:
   MaxHealth: 50
   RegenerationTime: 0
   Drop: {fileID: 2218048226611118485, guid: f4716a9f2774415468d1413cf95d80bc, type: 3}
+  maxDropAmount: 1
+  minDropAmount: 1
+  dropForce: 3

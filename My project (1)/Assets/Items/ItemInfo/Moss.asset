@@ -22,6 +22,7 @@ MonoBehaviour:
   maxAmount: 64
   appropriateItem: {fileID: 2218048226611118485, guid: 6fd0698fbb562e647aef5309be49a1f7, type: 3}
   icon: {fileID: 21300000, guid: 935f865f8f8cce2498af7847afb87027, type: 3}
-  tile: {fileID: 0}
+  tile: {fileID: 11400000, guid: cb06f3cdaa1ce0e4ebfd8122c84b2f26, type: 2}
   tile2: {fileID: 0}
   block: {fileID: 2218048226611118485, guid: 7679844727950bd4189de0ff0eeb98ae, type: 3}
+  rocket: {fileID: 0}

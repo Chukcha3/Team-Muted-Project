@@ -25,6 +25,7 @@ MonoBehaviour:
   - {fileID: 2218048226611118485, guid: 9f21cc7cfb82df64a91eec3110125a63, type: 3}
   - {fileID: 2218048226611118485, guid: 3552d899f1ec10c49a3d81a6dd9b381b, type: 3}
   - {fileID: 2218048226611118485, guid: 564e25d528d141f40b05d1bdaba7d04b, type: 3}
+  - {fileID: 2218048226611118485, guid: 7bd0be91e4afb7440b0376afda8ffcc7, type: 3}
   Dirt: {fileID: 2218048226611118485, guid: 0093fe829dd9da0439a8e02a4cf8b2cf, type: 3}
   Grass: {fileID: 2218048226611118485, guid: 88d3036eb3267c648893fb279d57dc17, type: 3}
   Stone: {fileID: 2218048226611118485, guid: 89e417645dd92b346afdeefcda420e1f, type: 3}
@@ -38,3 +39,4 @@ MonoBehaviour:
   SandStone: {fileID: 2218048226611118485, guid: 3552d899f1ec10c49a3d81a6dd9b381b, type: 3}
   Zircon: {fileID: 2218048226611118485, guid: 564e25d528d141f40b05d1bdaba7d04b, type: 3}
   Ice: {fileID: 2218048226611118485, guid: cee473f2ddc714c4b9750cc35c790e80, type: 3}
+  Cabyg: {fileID: 2218048226611118485, guid: 7bd0be91e4afb7440b0376afda8ffcc7, type: 3}

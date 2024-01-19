@@ -15,6 +15,8 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private GameObject inventoryManagerOwner;
     [SerializeField] private GameObject fastPanel;
     [SerializeField] GameObject blocksHolder;
+    [SerializeField] Camera MyCamera;
+    [SerializeField] float range;
     private void Start()
     {
         inventoryManager = inventoryManagerOwner.GetComponent<InventoryManager>();
@@ -27,7 +29,7 @@ public class BuildingManager : MonoBehaviour
                 HighlightTile();
             
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             if (GetCurrentSlot().item != null)
             {
@@ -72,9 +74,14 @@ public class BuildingManager : MonoBehaviour
     }
     private void Build (InventorySlot currentSlot, Vector3Int position)
     {
-        GameObject blockFarFarAway = Instantiate(currentSlot.item.block, new Vector3 (9999, 9999, 999), Quaternion.identity, blocksHolder.transform);
-        currentSlot.item.tile.Paint(mainTilemap, blockFarFarAway, position);
-        currentSlot.DecreaseAmount(1);
+        Ray ray = MyCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
+        if (hit.collider == null)
+        {
+            GameObject blockFarFarAway = Instantiate(currentSlot.item.block, new Vector3(9999, 9999, 999), Quaternion.identity, blocksHolder.transform);
+            currentSlot.item.tile.Paint(mainTilemap, blockFarFarAway, position);
+            currentSlot.DecreaseAmount(1);
+        }
     }
     public InventorySlot GetCurrentSlot()
     {

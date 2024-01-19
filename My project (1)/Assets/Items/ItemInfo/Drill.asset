@@ -19,7 +19,7 @@ MonoBehaviour:
   craftAmount: 1
   type: 4
   itemName: Boer
-  itemDescription: 
+  itemDescription: Use it for mining blocks
   amount: 1
   maxAmount: 1
   appropriateItem: {fileID: 0}
@@ -27,4 +27,5 @@ MonoBehaviour:
   tile: {fileID: 0}
   tile2: {fileID: 0}
   block: {fileID: 0}
+  rocket: {fileID: 0}
   toolPrefab: {fileID: 9024186143361499516, guid: c3b63f1b9bf912f49b3abfd5401db06d, type: 3}
